@@ -1,10 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Calc</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motor Taksit Hesaplama</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Calc çalışıyor 🚀</h1>
+  <main class="container">
+    <h1>Motor Taksit Hesaplama</h1>
+
+    <section class="card" id="elden-section">
+      <h2>Motor - Elden Taksitli</h2>
+      <p class="notice">35% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
+      <div class="form-grid">
+        <label>
+          Peşin Fiyat
+          <input type="number" id="elden-price" min="0" step="0.01" placeholder="Peşin fiyat" />
+        </label>
+        <label>
+          Peşinat
+          <input type="number" id="elden-down" min="0" step="0.01" placeholder="Peşinat" />
+        </label>
+        <label>
+          Vade (Ay)
+          <select id="elden-term">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </label>
+      </div>
+      <button id="elden-calc">Hesapla</button>
+      <div class="result" id="elden-result"></div>
+    </section>
+
+    <section class="card" id="kredi-section">
+      <h2>Motor - Kredi Kartı</h2>
+      <p class="notice">20% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
+      <div class="form-grid">
+        <label>
+          Peşin Fiyat
+          <input type="number" id="kredi-price" min="0" step="0.01" placeholder="Peşin fiyat" />
+        </label>
+        <label>
+          Peşinat
+          <input type="number" id="kredi-down" min="0" step="0.01" placeholder="Peşinat" />
+        </label>
+        <label>
+          Vade (Ay)
+          <select id="kredi-term">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </label>
+      </div>
+      <button id="kredi-calc">Hesapla</button>
+      <div class="result" id="kredi-result"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="alert-modal" aria-hidden="true">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h3 id="modal-title">Uyarı</h3>
+      <div class="modal__message" id="modal-message"></div>
+      <button class="modal__close" id="modal-close">Kapat</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
