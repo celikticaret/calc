@@ -141,6 +141,7 @@ const calculate = ({
   const remaining = Math.max(price - down, 0);
   const totalInstallment = remaining * rate;
   const monthly = totalInstallment / Number(term);
+  const grandTotal = down + totalInstallment;
 
   setResult(
     resultEl,
@@ -148,11 +149,11 @@ const calculate = ({
       <div class="result-title">${label} sonucu</div>
       <div class="result-grid">
         <div class="result-item">
-          <span>Kalan Tutar</span>
-          <strong>${formatCurrency(remaining)}</strong>
+          <span>Toplam Tutar</span>
+          <strong>${formatCurrency(grandTotal)}</strong>
         </div>
         <div class="result-item">
-          <span>Taksitli Toplam</span>
+          <span>Peşinat Sonrası Kalan</span>
           <strong>${formatCurrency(totalInstallment)}</strong>
         </div>
         <div class="result-item">
