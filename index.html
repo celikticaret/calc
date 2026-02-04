@@ -10,8 +10,74 @@
   <main class="container">
     <img src="celik_logo.png" alt="Çelik Ticaret Logo" class="logo" />
 
+    <section class="card" id="elden-section">
+      <h2>Motor - Elden Taksitli</h2>
+      <h3>Elden taksitli motor satışlarında müşteri yüksek peşinat verdiğinde aşağıdaki avantajlı taksit fiyatlarından faydalanabilir.</h3>
+      <p class="notice">30% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
+      <div class="form-grid">
+        <label>
+          Peşin Fiyat
+          <input type="number" id="elden-price" min="0" step="0.01" placeholder="Peşin fiyat" />
+        </label>
+        <label>
+          Peşinat
+          <input type="number" id="elden-down" min="0" step="0.01" placeholder="Peşinat" />
+        </label>
+        <label>
+          Vade (Ay)
+          <select id="elden-term">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </label>
+      </div>
+      <button id="elden-calc">Hesapla</button>
+      <div class="result" id="elden-result"></div>
+    </section>
+
+    <section class="card" id="kredi-section">
+      <h2>Motor - Kredi Kartı</h2>
+      <h3>Kredi kartı ile motor satışlarında müşteri yüksek peşinat verdiğinde aşağıdaki avantajlı taksit fiyatlarından faydalanabilir.</h3>
+      <p class="notice">20% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
+      <div class="form-grid">
+        <label>
+          Peşin Fiyat
+          <input type="number" id="kredi-price" min="0" step="0.01" placeholder="Peşin fiyat" />
+        </label>
+        <label>
+          Peşinat
+          <input type="number" id="kredi-down" min="0" step="0.01" placeholder="Peşinat" />
+        </label>
+        <label>
+          Vade (Ay)
+          <select id="kredi-term">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+        </label>
+      </div>
+      <button id="kredi-calc">Hesapla</button>
+      <div class="result" id="kredi-result"></div>
+    </section>
+
     <section class="card" id="telefon-section">
       <h2>Telefon - Elden Taksitli</h2>
+      <h3>Elden taksitli telefon satışlarında müşteri yüksek peşinat verdiğinde aşağıdaki avantajlı taksit fiyatlarından faydalanabilir.</h3>
       <p class="notice">30% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
       <div class="form-grid">
         <label>
@@ -45,69 +111,6 @@
       <button id="telefon-calc">Hesapla</button>
       <div class="result" id="telefon-result"></div>
     </section>
-    
-    <section class="card" id="elden-section">
-      <h2>Motor - Elden Taksitli</h2>
-      <p class="notice">30% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
-      <div class="form-grid">
-        <label>
-          Peşin Fiyat
-          <input type="number" id="elden-price" min="0" step="0.01" placeholder="Peşin fiyat" />
-        </label>
-        <label>
-          Peşinat
-          <input type="number" id="elden-down" min="0" step="0.01" placeholder="Peşinat" />
-        </label>
-        <label>
-          Vade (Ay)
-          <select id="elden-term">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-          </select>
-        </label>
-      </div>
-      <button id="elden-calc">Hesapla</button>
-      <div class="result" id="elden-result"></div>
-    </section>
-
-    <section class="card" id="kredi-section">
-      <h2>Motor - Kredi Kartı</h2>
-      <p class="notice">20% peşinat alınmazsa ekstra iskonto uygulanmaz.</p>
-      <div class="form-grid">
-        <label>
-          Peşin Fiyat
-          <input type="number" id="kredi-price" min="0" step="0.01" placeholder="Peşin fiyat" />
-        </label>
-        <label>
-          Peşinat
-          <input type="number" id="kredi-down" min="0" step="0.01" placeholder="Peşinat" />
-        </label>
-        <label>
-          Vade (Ay)
-          <select id="kredi-term">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-          </select>
-        </label>
-      </div>
-      <button id="kredi-calc">Hesapla</button>
-      <div class="result" id="kredi-result"></div>
-    </section>
   </main>
 
   <div class="modal" id="alert-modal" aria-hidden="true">
@@ -122,5 +125,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
 
