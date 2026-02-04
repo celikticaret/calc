@@ -39,7 +39,7 @@ const setResult = (el, message, isError = false) => {
 };
 
 const motorEldenTaksitli = {
-  pesinatYuzdesi: 0.35,
+  pesinatYuzdesi: 0.30,
   oranlar: {
     "1": 1.15,
     "2": 1.21,
@@ -70,7 +70,7 @@ const motorKrediKarti = {
 };
 
 const telefonEldenTaksitli = {
-  pesinatYuzdesi: 0.4,
+  pesinatYuzdesi: 0.30,
   oranlar: {
     "1": 1.1,
     "2": 1.18,
@@ -207,3 +207,4 @@ const init = () => {
 };
 
 init();
+
