@@ -27,6 +27,7 @@ body {
 
 .logo {
   display: block;
+  width: 100%;
   max-width: 300px;
   height: auto;
   margin: 0 auto 24px;
@@ -225,3 +226,4 @@ button:hover {
   width: 100%;
   background: #ef4444;
 }
+
